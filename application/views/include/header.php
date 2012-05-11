@@ -61,9 +61,15 @@ if(isset($markitup)){ ?>
     <script src="/assets/js/bootstrap-collapse.js"></script>
     <script src="/assets/js/bootstrap-carousel.js"></script>
     <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/sysiphus.min.js"></script>
+    <script>
+        $(function(){
+            $('form').sisyphus();
+        });
+    </script>
+
     <?php if(isset($productslider)){ ?>
     <link rel="stylesheet" type="text/css" href="/assets/css/productslider.css" /> 
-
     <script src="/assets/js/slides.min.jquery.js"></script>
 	<script>
 		$(function(){
@@ -155,14 +161,14 @@ if(isset($markitup)){ ?>
         <a class="brand impactlabelsmall" href="#"><img src="/assets/images/falcontether.png" width="48px" height="24px" border="0"/>Falcon Tether</a>
         <?php if (empty($this->ezauth->user)){ ?>
         <div class="right">
-                <form class="form-inline" action="/members/login" method="post" style="padding:0px;margin:-5px 0 0px 0px;background:#292929;">
+                <form class="form-inline" action="http://www.falcontether.cc/members/login" method="post" style="padding:0px;margin:-5px 0 0px 0px;background:#292929;">
                 <input type="text" class="input-small" style="height:20px;" name="username" placeholder="User">
                     <input type="password" class="input-small" style="height:20px;" name="password" placeholder="Pass">
                 <button type="submit" class="btn btn-info btn-mini">Login</button>
                 <span style="position:relative;top:8px;">
                 <a href="http://ieb.cc/?route=authentications/authenticatewith/google"><img src="http://ieb.cc/images/google.png" height="24px" width="24px" border="0"/></a> 
                 <a href="http://ieb.cc/?route=authentications/authenticatewith/yahoo"><img src="http://ieb.cc/images/yahoo.png" height="24px" width="24px" border="0"/></a> 
-                <a href="http://ieb.cc/?route=authentications/authenticatewith/facebook"><img src="http://ieb.cc/images/facebook.png" height="24px" width="24px" border="0"/>
+                <a href="http://ieb.cc/?route=authentications/authenticatewith/facebook"><img src="http://ieb.cc/images/facebook.png" height="24px" width="24px" border="0"/></a>
                 <a href="http://ieb.cc/?route=authentications/authenticatewith/twitter"><img src="http://ieb.cc/images/twitter.png" height="24px" width="24px" border="0"/></a>  
                 <a href="http://ieb.cc/?route=authentications/authenticatewith/linkedin"><img src="http://ieb.cc/images/linkedin.png" height="24px" width="24px" border="0"/></a>
                 <a href="http://ieb.cc/?route=authentications/authenticatewith/lastfm"><img src="http://ieb.cc/images/lastfm.png" height="24px" width="24px" border="0"/></a>
@@ -185,6 +191,13 @@ if(isset($markitup)){ ?>
             <li<?php if($this->uri->segment(1) == "members" && !$this->uri->segment(2)) echo $active; ?>><a href="/members">Home</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/forum">Community</a></li>
+            <?php if (!empty($this->ezauth->user)){ ?>
+            <li<?php if($this->uri->segment(2) == "project") echo $active; ?>><a href="/members/project">Editor</a></li>
+            <li<?php if($this->uri->segment(2) == "content") echo $active; ?>><a href="/members/content">Content</a></li>
+            <li<?php if($this->uri->segment(2) == "countdown") echo $active; ?>><a href="/members/countdown">Countdown</a></li>
+            <!--?php//<li //if($this->uri->segment(2) == "upload") echo $active; ><a href="/members/upload">Upload</a></li>?-->
+            <li<?php if($this->uri->segment(2) == "player") echo $active; ?>><a href="/members/player">Player</a></li>
+            <?php } ?>
             <li>
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
                 <input type="hidden" name="cmd" value="_s-xclick">
@@ -195,13 +208,6 @@ if(isset($markitup)){ ?>
 
 
             </li>
-            <?php if (!empty($this->ezauth->user)){ ?>
-            <li<?php if($this->uri->segment(2) == "project") echo $active; ?>><a href="/members/project">Editor</a></li>
-            <li<?php if($this->uri->segment(2) == "content") echo $active; ?>><a href="/members/content">Content</a></li>
-            <li<?php if($this->uri->segment(2) == "countdown") echo $active; ?>><a href="/members/countdown">Countdown</a></li>
-            <?php<li //if($this->uri->segment(2) == "upload") echo $active; ><a href="/members/upload">Upload</a></li>?>
-            <li<?php if($this->uri->segment(2) == "player") echo $active; ?>><a href="/members/player">Player</a></li>
-            <?php } ?>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
