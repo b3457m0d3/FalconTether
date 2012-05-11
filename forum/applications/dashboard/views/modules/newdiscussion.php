@@ -1,0 +1,3 @@
+<?php if (!defined('APPLICATION')) exit();
+echo Anchor(T('<i class="icon-plus"></i> Start a New Discussion'), '/post/discussion'.(array_key_exists('CategoryID', $Data) ? '/'.$Data['CategoryID'] : ''), 'BigButton NewDiscussion');
+if (C('Plugins.QnA.UseBigButtons') && C('EnabledPlugins.QnA')) { echo Anchor(T('<i class="icon-question-sign"></i> Ask a New Question'), '/post/discussion?Type=Question', 'BigButton NewQuestion'); }

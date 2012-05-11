@@ -1,0 +1,26 @@
+/*--------------------------------------------------*/
+/* Import CSS files - DO NOT DELETE THESE */
+/* NB: This file will have to be updated manually
+/* if you wish to keep your custom styles
+/*--------------------------------------------------*/
+
+	@import url('css/main.min.css');
+
+/*--------------------------------------------------*/
+/* If you want to embed your Vanilla forum, uncomment
+the following line to enable the special embed.css */
+/*--------------------------------------------------*/
+
+	/* @import url('css/embed.min.css'); */
+	
+/*--------------------------------------------------*/
+/* The following files are optional CSS skins */
+/*--------------------------------------------------*/
+	
+	/* Adds an Apple-style linen bg texture */
+	/* @import url('css/linen.min.css'); */
+
+/*--------------------------------------------------*/
+/* Insert your custom CSS here */
+/*--------------------------------------------------*/
+

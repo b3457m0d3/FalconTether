@@ -1,0 +1,1 @@
+[02-May-2012 22:09:06] PHP Fatal error:  Using $this when not in object context in /home/bo0m3r/public_html/falcontether.cc/blog/wp-content/themes/wordpress-bootstrap-v2.1/header.php on line 257
