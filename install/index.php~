@@ -2,7 +2,7 @@
 
 error_reporting(E_NONE);
 
-$db_config_path = '../system/application/config/database.php';
+$db_config_path = '../application/config/database.php';
 
 // Only load the classes in case the user submitted the form
 if($_POST) {
@@ -49,7 +49,7 @@ if($_POST) {
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-		<title>Install | Your App</title>
+		<title>Falcon Tether Installer</title>
 
 		<style type="text/css">
 		  body {
@@ -107,7 +107,7 @@ if($_POST) {
 		  </form>
 
 	  <?php else: ?>
-      <p class="error">Please make the /system/application/config/database.php file writable. <strong>Example</strong>:<br /><br /><code>chmod 777 system/application/config/database.php</code></p>
+      <p class="error">Please make the /application/config/database.php file writable. <strong>Example</strong>:<br /><br /><code>chmod 777 system/application/config/database.php</code></p>
 	  <?php endif; ?>
 
 	</body>
