@@ -195,27 +195,13 @@ class Members extends CI_Controller {
 		
 	}
 	function profile($user=FALSE){
+                $data = array();
+                if($this->selected>0) $data['theme'] = $this->themes[$this->selected];
 		$this->load->view('include/header');
 		$this->load->view('user_profile',array('user'=>$user));
-		
 		$this->load->view('include/footer');
-		
 	}
-	function show_files(){
-		print_r($this->_user_files());
-	}
-	function add_gamertag(){
-		$this->load->view('login/top');
-		$gamertag = $this->input->post('gamertag-txt');
-		if($gamertag !== FALSE){
-			$this->db->where('userid',$this->ezauth->user->id);
-			if($this->db->update('userinfo',array('gamertag'=>$gamertag))){
-				echo "<h2><Gamertag Added/h2>";
-				echo "<a href='/members/profile/".$this->ezauth->user->id."'>Back to Profile</a>";
-			}
-		}
-		$this->load->view('login/bottom');
-	}
+	
 	public function login($data = array()) {
 	        $rules['username'] = "required";
 	        $this->validation->set_rules($rules);
@@ -274,7 +260,7 @@ class Members extends CI_Controller {
 				address by clicking the link below or copying it and pasting it into your browser.</p><p>
 				{unwrap}
 				<a href="http://www.adipa.mobi/members/verify/'.$v_code.'" 
-				title="Verify your e-mail address">http://www.adipa.mobi/members/verify/'.$v_code.'
+				title="Verify your e-mail address">'.$this->config->.'/members/verify/'.$v_code.'
 				{/unwrap}</a></p>';
 				
 				$this->_send_mail($inp['ez_users']['email'], 'Verify your e-mail address!', $message);
@@ -381,6 +367,74 @@ class Members extends CI_Controller {
 		}		
 		$this->load->view('login/changepw_view', $data);
 	}
+
+public function WriteJsConnect($User, $Request, $ClientID, $Secret, $Secure = TRUE) {
+	   $User = array_change_key_case($User);
+	   define('JS_TIMEOUT', 24 * 60);
+	   // Error checking.
+	   if ($Secure) {
+	      // Check the client.
+	      if (!isset($Request['client_id']))
+		 $Error = array('error' => 'invalid_request', 'message' => 'The client_id parameter is missing.');
+	      elseif ($Request['client_id'] != $ClientID)
+		 $Error = array('error' => 'invalid_client', 'message' => "Unknown client {$Request['client_id']}.");
+	      elseif (!isset($Request['timestamp']) && !isset($Request['signature'])) {
+		 if (is_array($User) && count($User) > 0) {
+		    // This isn't really an error, but we are just going to return public information when no signature is sent.
+		    $Error = array('name' => $User['name'], 'photourl' => @$User['photourl']);
+		 } else {
+		    $Error = array('name' => '', 'photourl' => '');
+		 }
+	      } elseif (!isset($Request['timestamp']) || !is_numeric($Request['timestamp']))
+		 $Error = array('error' => 'invalid_request', 'message' => 'The timestamp parameter is missing or invalid.');
+	      elseif (!isset($Request['signature']))
+		 $Error = array('error' => 'invalid_request', 'message' => 'Missing  signature parameter.');
+	      elseif (($Diff = abs($Request['timestamp'] - $this->JsTimestamp())) > JS_TIMEOUT)
+		 $Error = array('error' => 'invalid_request', 'message' => 'The timestamp is invalid.');
+	      else {
+		 // Make sure the timestamp hasn't timed out.
+		 $Signature = md5($Request['timestamp'].$Secret);
+		 if ($Signature != $Request['signature'])
+		    $Error = array('error' => 'access_denied', 'message' => 'Signature invalid.');
+	      }
+	   }
+	   
+	   if (isset($Error)) $Result = $Error;
+	   elseif (is_array($User) && count($User) > 0)  $Result = ($Secure === NULL) ? $User : $this->SignJsConnect($User, $ClientID, $Secret, TRUE);
+	   else $Result = array('name' => '', 'photourl' => '');
+	   
+	   $Json = json_encode($Result);
+	   
+	   echo (isset($Request['callback'])) ? "{$Request['callback']}($Json)" : $Json;
+	}
+	
+	public function SignJsConnect($Data, $ClientID, $Secret, $ReturnData = FALSE) {
+	   $Data = array_change_key_case($Data);
+	   ksort($Data);
+	
+	   foreach ($Data as $Key => $Value) {
+	      if ($Value === NULL)
+		 $Data[$Key] = '';
+	   }
+	   
+	   $String = http_build_query($Data);
+	//   echo "$String\n";
+	   $Signature = md5($String.$Secret);
+	   
+	   if ($ReturnData) {
+	      $Data['client_id'] = $ClientID;
+	      $Data['signature'] = $Signature;
+	//      $Data['string'] = $String;
+	      return $Data;
+	   } else {
+	      return $Signature;
+	   }
+	}
+	
+	public function JsTimestamp() {
+	   return time();
+	}
+
 	
 }
 

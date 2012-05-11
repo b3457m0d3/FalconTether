@@ -268,13 +268,7 @@ class Members extends CI_Controller {
 			if ($user_reg['reg_ok'] == 'yes') {
 				$user = $inp['ezusers'];
 				$un = $user['username'];
-				$num = $this->db->get_where('counters',array('site'=>'adipa'));
-				foreach($num->result() as $row){
-					$count = $row->count;
-				}
-				$newcount = $count + 1;
-				$this->db->where('site','adipa');
-				$this->db->update('counters',array('count'=>$newcount));
+				
 				
 				$folder = get_include_path()."assets/users/".$un."/";
 				if(mkdir($folder, 0777)){
@@ -298,9 +292,9 @@ class Members extends CI_Controller {
 		$config['protocol'] = 'sendmail';
 		$this->email->initialize($config);
 		if(is_null($from)){
-			$this->email->from('admin+noreply@adipa.mobi', 'AdipA');
+			$this->email->from($this->responseEmail);
 		} else {
-			$this->email->from($from, 'AdipA');
+			$this->email->from($from);
 		}
 		$this->email->to($to);
 		$this->email->subject($subject);
