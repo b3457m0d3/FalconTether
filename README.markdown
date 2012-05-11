@@ -1,9 +1,18 @@
 Falcon Tether
 ================================
 
-Twitter's Bootstrap infused the , and 
+Bootstrap's Older Brother.  
+
 *Learn more @  [FalconTether.cc](http://www.falcontether.cc).*
 
+Components
+-------------------------
+**Links to These Repos are in my Watchlist**
+
+* Twitter Bootstrap
+* CodeIgniter Bootstrap
+* Bootstrap-Themed Vanilla Forum 
+* Bootstrap-Themed Wordpress Blog
 
 Installation
 -------------------------
@@ -46,7 +55,7 @@ What about some code **in** a list? That's insane, right?
 
         ['a', 'b'].map(&:uppercase)
 
-Some people seem to like definition lists
+
 
 <dl>
   <dt>Lower cost</dt>
@@ -72,14 +81,7 @@ How about we throw some angle braces and ampersands in there?
         &copy; 2004 Foo Corporation
     </div>
 
-Set in stone
-------------
 
-Preformatted blocks are useful for ASCII art:
-
-<code>
-git init
-</code>
 
 Playing the blame game
 ----------------------

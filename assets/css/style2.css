@@ -1,0 +1,357 @@
+/* Subnav */
+.subnav {
+   width: 100%;
+   height: 36px;
+   background-color: #eeeeee; /* Old browsers */
+   background-repeat: repeat-x; /* Repeat the gradient */
+   background-image: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%); /* FF3.6+ */
+   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+   background-image: -webkit-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* Chrome 10+,Safari 5.1+ */
+   background-image: -ms-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* IE10+ */
+   background-image: -o-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* Opera 11.10+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+   background-image: linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* W3C */
+   border: 1px solid #e5e5e5;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+}
+.subnav .nav {
+   margin-bottom: 0;
+}
+.subnav .nav > li > a {
+   margin: 0;
+   padding-top:    11px;
+   padding-bottom: 11px;
+   border-left: 1px solid #f5f5f5;
+   border-right: 1px solid #e5e5e5;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+.subnav .nav > .active > a,
+.subnav .nav > .active > a:hover {
+   padding-left: 13px;
+   color: #777;
+   background-color: #e9e9e9;
+   border-right-color: #ddd;
+   border-left: 0;
+   -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
+   -moz-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
+   box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
+}
+
+.subnav .nav > .active > a .caret,
+.subnav .nav > .active > a:hover .caret {
+   border-top-color: #777;
+}
+
+.subnav .nav > li:first-child > a,
+.subnav .nav > li:first-child > a:hover {
+   border-left: 0;
+   padding-left: 12px;
+   -webkit-border-radius: 4px 0 0 4px;
+   -moz-border-radius: 4px 0 0 4px;
+   border-radius: 4px 0 0 4px;
+}
+
+.subnav .nav > li:last-child > a {
+   border-right: 0;
+}
+
+.subnav .dropdown-menu {
+   -webkit-border-radius: 0 0 4px 4px;
+   -moz-border-radius: 0 0 4px 4px;
+   border-radius: 0 0 4px 4px;
+}
+
+/* RATING */
+#rating { list-style:none; width:460px; margin:20px auto; }
+#rating li { display:inline; float:left; }
+#rating li a { display:block; width:80px; height:80px; margin:5px; border:1px solid #888; background-color:#333; text-indent:-9999px;
+	-moz-box-shadow:0 0 5px #888; -moz-border-radius:40px; -webkit-box-shadow:0 0 5px #888; -webkit-border-radius:40px; -o-box-shadow:0 0 5px #888; -o-border-radius:40px; }
+
+#ratinginfo { clear:left; width:350px; margin:120px auto; }
+#ratinginfo p { text-align:center; background-image:url("../images/textbg.png"); font:20px Georgia,'Times New Roman',serif; padding:10px;
+	-moz-box-shadow:0 0 5px #888; -moz-border-radius:40px; -webkit-box-shadow:0 0 5px #888; -webkit-border-radius:40px; -o-box-shadow:0 0 5px #888; -o-border-radius:40px; }
+
+form div{position:relative;margin:1em 0;}
+form .counter{
+	position:absolute;
+	right:0;
+	top:0;
+	font-size:20px;
+	font-weight:bold;
+	color:#ccc;
+	}
+form .warning{color:#600;}	
+form .exceeded{color:#e00;}
+
+
+.example {
+  font: 16px "Times New Roman", "Times", serif;
+  width:735px;
+  margin-left:-10px;
+}
+
+.example p {
+  margin:0;
+  color:#444;
+}
+
+.example code {
+  font-size:12px;
+  color:#888;
+}
+
+.example code b {
+  font-weight:bold;
+  color:#222;
+}
+
+.exampleTop {
+  background-image: url(Images/ExampleTop.png);
+  width:735px;
+  height:9px;
+}
+
+.exampleCenter {
+  background-image: url(Images/ExampleCenter.png);
+  width:655px;
+  padding-top:10px;
+  padding-left:40px;
+  padding-right:40px;
+  padding-bottom:8px;
+}
+
+.exampleBottom {
+  background-image: url(Images/ExampleBottom.png);
+  width:735px;
+  height:25px;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* park example */
+
+#parkExample {
+	position:relative;
+	font: 14px "Times New Roman", "Times", serif;
+	line-height: 1.4;
+	color: #111;
+	margin-left:0px;
+	width:604px;
+}
+
+#parkExample h5 {
+	font: 16px "Times New Roman", "Times", serif;
+	font-weight: bold;
+	line-height: 1.4;
+	color: #111;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+#parkExample h6 {
+	font: 14px "Times New Roman", "Times", serif;
+	font-weight: normal;
+	font-style: italic;
+	line-height: 1.4;
+	color: #111;
+    margin-top:13px;
+    margin-bottom:-5px;
+}
+
+#parkExample p {
+    margin-top:12px;
+    margin-bottom:12px;
+}
+
+#parkExample .TKAdjustableNumber {
+}
+
+#parkExample .TKAdjustableNumberHover {
+}
+
+#parkExample .TKToggle {
+}
+
+#parkExample .TKToggle:hover {
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* filter example */
+
+#filterExample {
+	position:relative;
+	font: 13px "Times New Roman", "Times", serif;
+	color: #111;
+	margin-left:0px;
+	margin-top:20px;
+	margin-bottom:20px;
+	width:598px;
+}
+
+#filterExample p {
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+#filterExample i {
+	font: 13px "Times New Roman", "Times", serif;
+	font-style: italic;
+}
+
+.filterSidebar {
+	position:absolute;
+	left:420px;
+	width:170px;
+	font-size:12px;
+	color:#aaa;
+}
+
+.filterIndent {
+	position:relative;
+	margin-left: 40px;
+	margin-bottom:25px;
+}
+
+.filterDynamicLabel {
+	position:absolute;
+	width:40px;
+	height:14px;
+	font: 11px "Times New Roman", "Times", serif;
+	color: #00f;
+	background-color:rgba(200,0,0,0.3);
+	background-color:#fff;
+	text-align:center;
+	display:none;
+}
+
+.filterDynamicCoef {
+	position:absolute;
+	font: 13px "Times New Roman", "Times", serif;
+	color: #00f;
+	background-color:rgba(200,0,0,0.3);
+	background-color:#fff;
+	text-align:left;
+	display:none;
+}
+
+.FilterStepPlot {
+	position:absolute;
+	display:none;
+}
+
+.FilterTimePlot {
+	position:absolute;
+	display:none;
+}
+
+.FilterPolePlot {
+	position:absolute;
+	display:none;
+}
+
+.filterFreqPlot {
+	position:relative;
+	width:256px;
+	height:128px;
+	border-left:1px solid #222;
+	border-bottom:1px solid #222;
+}
+
+.filterUnstable {
+	position:absolute;
+	left:13px;
+	top:40px;
+	color:#f00;
+}
+
+.filterParams {
+	position:absolute;
+	color: #00f;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 6px;
+	padding-right: 6px;
+	pointer-events:none;
+}
+
+.FilterKnobHelp {
+	position:absolute;
+	display:none;
+	left:0px;
+	top:-13px;
+	color: #b0b0b0;
+	font: 11px "Times New Roman", "Times", serif;
+	font-style: italic;
+	pointer-events:none;
+}
+
+.cursorDrag {
+	cursor: pointer;
+	cursor: move;
+}
+#left {
+	float: left;
+	width: 250px;
+	background-color: #FFFFFF;
+	color: black;
+}
+
+#main {
+	margin: 5px 5px 5px 260px;
+	padding: 15px;
+	border-left: 1px solid silver;
+}
+.right {
+	color: gray;
+	background-color: #FFFFFF;
+	float: right;
+	font-size: 100%;
+	margin-top: 5px;
+}
+.left {
+	color: gray;
+	background-color: #FFFFFF;
+	float: left;
+	font-size: 100%;
+	margin-top: 5px;
+}
+
+/* Bar Graphs */
+.graph {
+  width: 250px;
+  position: relative;
+  right: 30px;
+}
+.bar-title {
+  position: relative;
+  float: left;
+  width: 104px;
+  line-height: 20px;
+  margin-right: 17px;
+  font-weight: bold;
+  text-align: right;
+}
+.bar-container {
+  position: relative;
+  float: left;
+  width: 110px;
+  height: 10px;
+  margin: 0px 0px 15px;
+}
+
+.bar-container div {
+  background-color:#cc4400;
+  height: 20px;
+}
+.bar-container strong {
+  position: absolute;
+  right: -32px;
+  top: 0px;
+  overflow: hidden;
+}
+#poll-results p {
+  text-align: center;
+}

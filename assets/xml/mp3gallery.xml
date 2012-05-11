@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mp3gallery>
+	
+	<albums startAlbumNo = "">
+		
+		<!-- if this album tag will not be here, the player will work as usual -->
+        <album id="1">
+			
+			<author><![CDATA[WAC]]></author>
+			
+			<image>content/albums/inspire/cover.png</image>
+
+			<name alsoInList = "true"><![CDATA[<font color="#8E0020">INSPIRE</font>]]></name>
+			<caption><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer...  <font color="#8E0020"><a href="http://www.flabell.com">read more</a></font>]]></caption>
+			
+			<link></link> <!-- to go to a specific page on clicking the image inside the mp3 player -->
+			
+			<!--<buy price = "9.99" target = "">http://www.themesbell.com</buy>--> 
+																																			
+			
+			<tracks>
+				<item id="11">
+					<title><![CDATA[00. Tuck N Ro11]]></title>
+					<artist><![CDATA[]]></artist> <!-- if you want this item to have a different artist(for example featuring artist write the text in this tag -->
+					<duration></duration> <!-- define this only if is the correct duration, otherwise it will make the song to jump incorrectly -->
+					
+					<buy price = "0.99" url = "http://www.flabell.com" target = "_blank">Buy</buy>																									 
+					<song>content/albums/inspire/00. Tuck N Ro11.mp3</song>
+				</item>
+				<item id="12">
+					<title><![CDATA[01. Intr0 ENjoy Trip H0p]]></title>
+					<artist><![CDATA[]]></artist>
+					<duration></duration>
+					
+					<!--<buy price = "" url = "" target = ""></buy>-->
+					
+					<song>content/albums/inspire/01. Intr0 ENjoy Trip H0p.mp3</song>
+				</item>
+				<item id="13">
+					<title><![CDATA[02. XoXoo]]></title>
+					<artist><![CDATA[]]></artist>
+                                        <duration></duration>
+					<!--<buy price = "" url = ""></buy>-->
+					<song>content/albums/inspire/02. XoXoo.mp3</song>
+				</item>
+				<item id="14">
+					<title><![CDATA[03. H34RT 1ine]]></title>
+					<artist><![CDATA[]]></artist>
+					<price>12</price>
+					<duration></duration>
+					<!--<buy url = "http://www.flabell.com"></buy>-->
+					<song>content/albums/inspire/03. H34RT 1ine.mp3</song>
+				</item>
+				<item id="15">
+					<title><![CDATA[04. Surface Tension]]></title>
+					<artist><![CDATA[]]></artist>
+					<duration></duration>
+					<!--<buy url = "http://www.paypal.com"></buy>-->
+					<song>content/albums/inspire/04. Surface Tension.mp3</song>
+				</item>
+				<item id="16">
+					<title><![CDATA[05. Pixellate]]></title>
+					<artist><![CDATA[]]></artist>
+					<duration></duration>
+					<!--<buy url = "http://www.paypal.com"></buy>-->
+					<song>content/albums/inspire/05. Pixellate.mp3</song>
+				</item>
+				<item id="17">
+					<title><![CDATA[06. 9614 @ 96]]></title>
+					<artist><![CDATA[]]></artist>
+					<duration></duration>
+					<!--<buy url = "http://www.paypal.com"></buy>-->
+					<song>content/albums/inspire/06. 9614 @ 96.mp3</song>
+				</item>	
+				<item id="18">
+					<title><![CDATA[07. 9614 @ 125]]></title>
+					<artist><![CDATA[]]></artist>
+					<duration></duration>
+					<!--<buy url = "http://www.paypal.com"></buy>-->
+					<song>content/albums/inspire/07. 9614 @ 125.mp3</song>
+				</item>
+			</tracks>
+		</album>
+		
+	</albums>	
+</mp3gallery>

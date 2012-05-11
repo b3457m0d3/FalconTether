@@ -1,0 +1,11 @@
+[16-Mar-2012 01:02:15] PHP Parse error:  syntax error, unexpected T_STRING in /home/bo0m3r/public_html/tarantism.us/assets/xml/mp3gallery.php on line 1
+[16-Mar-2012 01:03:35] PHP Parse error:  syntax error, unexpected T_STRING in /home/bo0m3r/public_html/tarantism.us/assets/xml/mp3gallery.php on line 2
+[16-Mar-2012 01:03:39] PHP Parse error:  syntax error, unexpected T_STRING in /home/bo0m3r/public_html/tarantism.us/assets/xml/mp3gallery.php on line 2
+[16-Mar-2012 01:04:08] PHP Parse error:  syntax error, unexpected T_STRING in /home/bo0m3r/public_html/tarantism.us/assets/xml/mp3gallery.php on line 2
+[16-Mar-2012 01:04:14] PHP Parse error:  syntax error, unexpected T_STRING in /home/bo0m3r/public_html/tarantism.us/assets/xml/mp3gallery.php on line 2
+[16-Mar-2012 01:04:59] PHP Fatal error:  Call to undefined function  get_instance() in /home/bo0m3r/public_html/tarantism.us/assets/xml/mp3gallery.php on line 6
+[16-Mar-2012 01:05:18] PHP Fatal error:  Call to undefined function  get_instance() in /home/bo0m3r/public_html/tarantism.us/assets/xml/mp3gallery.php on line 6
+[16-Mar-2012 01:06:10] PHP Fatal error:  Call to undefined function  get_instance() in /home/bo0m3r/public_html/tarantism.us/assets/xml/mp3gallery.php on line 6
+[16-Mar-2012 01:06:27] PHP Fatal error:  Call to undefined function  get_instance() in /home/bo0m3r/public_html/tarantism.us/assets/xml/mp3gallery.php on line 4
+[16-Mar-2012 01:07:17] PHP Fatal error:  Call to undefined function  get_instance() in /home/bo0m3r/public_html/tarantism.us/assets/xml/mp3gallery.php on line 4
+[28-Mar-2012 08:10:44] PHP Fatal error:  Call to undefined function  get_instance() in /home/bo0m3r/public_html/tarantism.us/assets/xml/mp3gallery.php on line 4
