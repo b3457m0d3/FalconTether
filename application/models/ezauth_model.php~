@@ -2,7 +2,7 @@
 
 class EzAuth_Model extends CI_Model {
 
-	var $program;
+	var $program			= 	'tarantism';
 	var $protected_pages 		= 	array();		
 	var $roles = array('user', 'admin');
 	var $cookie_expire		=	'86500';			
@@ -11,7 +11,7 @@ class EzAuth_Model extends CI_Model {
 	
 	function __construct() {
 		parent::__construct();
-		$this->program = $this->config->item('ezauth_program');
+		
 		if ($this->session->userdata('ez_user')) {
 			$this->user = $this->session->userdata('ez_user');
 		}
