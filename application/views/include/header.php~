@@ -165,14 +165,6 @@ if(isset($markitup)){ ?>
                 <input type="text" class="input-small" style="height:20px;" name="username" placeholder="User">
                     <input type="password" class="input-small" style="height:20px;" name="password" placeholder="Pass">
                 <button type="submit" class="btn btn-info btn-mini">Login</button>
-                <span style="position:relative;top:8px;">
-                <a href="http://ieb.cc/?route=authentications/authenticatewith/google"><img src="http://ieb.cc/images/google.png" height="24px" width="24px" border="0"/></a> 
-                <a href="http://ieb.cc/?route=authentications/authenticatewith/yahoo"><img src="http://ieb.cc/images/yahoo.png" height="24px" width="24px" border="0"/></a> 
-                <a href="http://ieb.cc/?route=authentications/authenticatewith/facebook"><img src="http://ieb.cc/images/facebook.png" height="24px" width="24px" border="0"/></a>
-                <a href="http://ieb.cc/?route=authentications/authenticatewith/twitter"><img src="http://ieb.cc/images/twitter.png" height="24px" width="24px" border="0"/></a>  
-                <a href="http://ieb.cc/?route=authentications/authenticatewith/linkedin"><img src="http://ieb.cc/images/linkedin.png" height="24px" width="24px" border="0"/></a>
-                <a href="http://ieb.cc/?route=authentications/authenticatewith/lastfm"><img src="http://ieb.cc/images/lastfm.png" height="24px" width="24px" border="0"/></a>
-                </span>
                 </form>
                 
 

@@ -161,7 +161,7 @@ if(isset($markitup)){ ?>
         <a class="brand impactlabelsmall" href="#"><img src="/assets/images/falcontether.png" width="48px" height="24px" border="0"/>Falcon Tether</a>
         <?php if (empty($this->ezauth->user)){ ?>
         <div class="right">
-                <form class="form-inline" action="http://www.falcontether.cc/members/login" method="post" style="padding:0px;margin:-5px 0 0px 0px;background:#292929;">
+                <form class="form-inline" action="/members/login" method="post" style="padding:0px;margin:-5px 0 0px 0px;background:#292929;">
                 <input type="text" class="input-small" style="height:20px;" name="username" placeholder="User">
                     <input type="password" class="input-small" style="height:20px;" name="password" placeholder="Pass">
                 <button type="submit" class="btn btn-info btn-mini">Login</button>
