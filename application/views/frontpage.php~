@@ -17,7 +17,32 @@
     <div class="tab-pane active" id="tab1">
     <h1>Thank You!</h1>
     <h2>This one goes out to all the 313375 of the open source community.  And all who put the time and effort into developing top notch software - we couldn't have done this without you!</h2>
-    
+    <ul class="well unstyled nav-pills">
+    <li><a class="btn btn-info" href="http://www.github.com/rmm5t/jquery-timeago">rmm5t/jquery-timeago</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/mikecrittenden/codeigniter-installer">mikecrittenden/codeigniter-installer</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/ehynds/jquery-ui-multiselect-widget">ehynds/jquery-ui-multiselect-widget</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/davidwisch/ci_rss">davidwisch/ci_rss</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/nathansearles/Slides">nathansearles/Slides</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/treetwo/codeigniter-image-helper">treetwo/codeigniter-image-helper</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/philsturgeon/codeigniter-template">philsturgeon/codeigniter-template</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/philsturgeon/codeigniter-unzip">philsturgeon/codeigniter-unzip</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/wingdspur/codeigniter-piwik">wingdspur/codeigniter-piwik</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/ollierattue/codeigniter-time-helper">ollierattue/codeigniter-time-helper</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/blueimp/jQuery-File-Upload">blueimp/jQuery-File-Upload</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/ronan-gloo/Codeigniter-Google-Analytics-library">ronan-gloo/Codeigniter-Google-Analytics-library</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/processing-js/processing-js">processing-js/processing-js</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/krisk/textualizer">krisk/textualizer</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/worrydream/Tangle">worrydream/Tangle</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/waynhall/CodeIgniter-Library-for-MailChimp-API-v1.3">waynhall/CodeIgniter-Library-for-MailChimp-API-v1.3</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/makeusabrew/bootbox">makeusabrew/bootbox</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/AeroCross/ci-wp">AeroCross/ci-wp</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/addyosmani/jquery-ui-bootstrap">addyosmani/jquery-ui-bootstrap</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/dwisetiyadi/CodeIgniter-PHP-QR-Code">dwisetiyadi/CodeIgniter-PHP-QR-Code</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/thomaspark/bootswatch">thomaspark/bootswatch</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/jtrainaldi/codeigniter-twitterbootstrap-helper">jtrainaldi/codeigniter-twitterbootstrap-helper</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/sjlu/CodeIgniter-Bootstrap">sjlu/CodeIgniter-Bootstrap</a></li>
+    <li><a class="btn btn-info" href="http://www.github.com/kasperisager/VanillaBootstrap">kasperisager/VanillaBootstrap</a></li>
+    </ul>
     </div>
     <div class="tab-pane" id="tab2">
           <ul class="well unstyled nav-pills">

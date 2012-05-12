@@ -6,11 +6,11 @@
    <meta name="description" content="">
    <meta name="keywords" content="">
    <meta name="author" content="">
-    <link href="http://www.falcontether.cc/assets/images/ftico.png" rel="shortcut icon" type="image/ico" /><meta name="description" content="" />
+    <link href="/assets/images/ftico.png" rel="shortcut icon" type="image/ico" /><meta name="description" content="" />
 
    <title>Falcon Tether - CodeIgniter, Twitter's BootStrap, Vanilla, HybridAuth, Paypal And A Whole Lot More!</title>
      
-        <?php 
+<?php 
 if(isset($theme)){
 ?>
         <link href='/assets/css/themes/bootstrap.<?php echo $theme; ?>.css' rel="stylesheet">
