@@ -1,34 +1,34 @@
 <?php
 
 class MCAPI {
-    var $version = "1.3";
-    var $errorMessage;
-    var $errorCode;
+    public $version = "1.3";
+    public $errorMessage;
+    public $errorCode;
     
     /**
      * Cache the information on the API location on the server
      */
-    var $apiUrl;
+    public $apiUrl;
     
     /**
      * Default to a 300 second timeout on server calls
      */
-    var $timeout = 300; 
+    public $timeout = 300; 
     
     /**
      * Default to a 8K chunk size
      */
-    var $chunkSize = 8192;
+    public $chunkSize = 8192;
     
     /**
      * Cache the user api_key so we only have to log in once per client instantiation
      */
-    var $api_key;
+    public $api_key;
 
     /**
      * Cache the user api_key so we only have to log in once per client instantiation
      */
-    var $secure = false;
+    public $secure = false;
     
     /**
      * Connect to the MailChimp API for a given list.
@@ -43,7 +43,7 @@ class MCAPI {
             $this->secure = false;
         }
         $this->apiUrl = parse_url("http://api.mailchimp.com/" . $this->version . "/?output=php");
-        $this->api_key = $config['apikey'];
+        $this->api_key = ;
     }
     function setTimeout($seconds){
         if (is_int($seconds)){
@@ -80,10 +80,6 @@ class MCAPI {
 
     /**
      * Schedule a campaign to be sent in the future
-     *
-     * @section Campaign  Related
-     * @example mcapi_campaignSchedule.php
-     * @example xml-rpc_campaignSchedule.php
      *
      * @param string $cid the id of the campaign to schedule
      * @param string $schedule_time the time to schedule the campaign. For A/B Split "schedule" campaigns, the time for Group A - in YYYY-MM-DD HH:II:SS format in <strong>GMT</strong>
@@ -156,8 +152,7 @@ class MCAPI {
      * @param string $send_type optional by default (null) both formats are sent - "html" or "text" send just that format
      * @return boolean true on success
      */
-    function campaignSendTest($cid, $test_emails=array (
-), $send_type=NULL) {
+    function campaignSendTest($cid, $test_emails=array (), $send_type=NULL) {
         $params = array();
         $params["cid"] = $cid;
         $params["test_emails"] = $test_emails;
@@ -444,8 +439,7 @@ class MCAPI {
             array segment_opts the segment used for the campaign - can be passed to campaignSegmentTest() or campaignCreate()
             array type_opts the type-specific options for the campaign - can be passed to campaignCreate()
      */
-    function campaigns($filters=array (
-), $start=0, $limit=25) {
+    function campaigns($filters=array (), $start=0, $limit=25) {
         $params = array();
         $params["filters"] = $filters;
         $params["start"] = $start;
@@ -897,8 +891,7 @@ class MCAPI {
      * @returnf string secure_url The URL to the shared report, including the password (good for loading in an IFRAME). For non-secure reports, this will not be returned
      * @returnf string password If secured, the password for the report, otherwise this field will not be returned
      */
-    function campaignShareReport($cid, $opts=array (
-)) {
+    function campaignShareReport($cid, $opts=array ()) {
         $params = array();
         $params["cid"] = $cid;
         $params["opts"] = $opts;
@@ -1137,8 +1130,7 @@ class MCAPI {
                  int click_rate the average click rate per campaign for the list  (empty value if we haven't calculated this yet)
              array modules Any list specific modules installed for this list (example is SocialPro)
      */
-    function lists($filters=array (
-), $start=0, $limit=25) {
+    function lists($filters=array (), $start=0, $limit=25) {
         $params = array();
         $params["filters"] = $filters;
         $params["start"] = $start;
@@ -1190,8 +1182,7 @@ class MCAPI {
     
      * @return bool true if the request succeeds, otherwise an error will be thrown
      */
-    function listMergeVarAdd($id, $tag, $name, $options=array (
-)) {
+    function listMergeVarAdd($id, $tag, $name, $options=array ()) {
         $params = array();
         $params["id"] = $id;
         $params["tag"] = $tag;
@@ -1398,9 +1389,7 @@ class MCAPI {
             boolean api optional actions that happen via API calls, defaults to false
      * @return bool true if the call succeeds, otherwise an exception will be thrown
      */
-    function listWebhookAdd($id, $url, $actions=array (
-), $sources=array (
-)) {
+    function listWebhookAdd($id, $url, $actions=array (), $sources=array ()) {
         $params = array();
         $params["id"] = $id;
         $params["url"] = $url;
@@ -1916,9 +1905,7 @@ class MCAPI {
      * @returnf string date_created The date/time the template was created
      * @returnf bool edit_source Whether or not you are able to edit the source of a template.
      */
-    function templates($types=array (
-), $category=NULL, $inactives=array (
-)) {
+    function templates($types=array (), $category=NULL, $inactives=array ()) {
         $params = array();
         $params["types"] = $types;
         $params["category"] = $category;
