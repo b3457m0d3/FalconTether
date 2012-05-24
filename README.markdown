@@ -1,7 +1,10 @@
 Falcon Tether
 ================================
 
-Everything you need to spread your wings wide, and keep your eyes on the prize.  
+**Collaborators Welcome!!**
+
+For Now: a work in progress to sharpen my skills
+Later: Everything you need to spread your wings wide, and keep your eyes on the prize.  
 
 *Learn more @  [FalconTether.cc](http://www.falcontether.cc).*
 
