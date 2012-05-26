@@ -25,7 +25,6 @@ class Fontface
 	}
 	public function loadtags()
 	{
-                //use the spark to fuse all the css into one minified file
 		foreach($this->loaded as $font){
 			$this->ci->combine->css($this->dir.$font.'/stylesheet.css');
 		}
