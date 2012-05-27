@@ -73,6 +73,9 @@ if ( ! function_exists('directory_map'))
 
 		return FALSE;
 	}
+}
+if ( ! function_exists('delete_folder'))
+{
 	function delete_folder($tmp_path){
 		if(!is_writeable($tmp_path) && is_dir($tmp_path)){chmod($tmp_path,0777);}
 		  $handle = opendir($tmp_path);
@@ -99,7 +102,13 @@ if ( ! function_exists('directory_map'))
 		else{return false;}
 	      }
 }
-
+if ( ! function_exists('check_dir'))
+{
+	function check_dir($dir){
+		if(!is_dir($dir)) return (mkdir($dir, 0777))?TRUE:FALSE;
+		else return TRUE;
+        }
+}
 
 /* End of file directory_helper.php */
 /* Location: ./system/helpers/directory_helper.php */
