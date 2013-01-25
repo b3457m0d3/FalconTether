@@ -39,6 +39,7 @@ class Gitigniter {
 		$this->org = $this->ci->config->item( 'gh_org', 'gitigniter' );
 		$this->redir_url = $this->ci->config->item( 'gh_redir_url', 'gitigniter' );
 		$this->scope = $this->ci->config->item( 'gh_scope', 'gitigniter' );
+		$this->gh_token = $this->ci->config->item( 'gh_token', 'gitigniter' );
 		
 		$this->ci->load->model('gitigniter_model');
 		$this->ci->load->library( 'session' );
@@ -103,7 +104,7 @@ class Gitigniter {
 						'code' => $code				 
 		);
 
-		curl_setopt( $ch, CURLOPT_HTTPHEADER, array( 'Authorization: token ' . $this->ci->session->userdata( 'gh_token' ) ) );
+		curl_setopt( $ch, CURLOPT_HTTPHEADER, array( 'Authorization: token ' . $this->token() ) );
 		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, TRUE );
 		curl_setopt( $ch, CURLOPT_POST, TRUE );
 		curl_setopt( $ch, CURLOPT_POSTFIELDS, $post );
@@ -157,7 +158,7 @@ class Gitigniter {
 		
 		$ch = curl_init( $this->api_url . $call . '?' . $query_string );
 		
-		curl_setopt( $ch, CURLOPT_HTTPHEADER, array( 'Authorization: token ' . $this->ci->session->userdata( 'gh_token' ) ) );
+		curl_setopt( $ch, CURLOPT_HTTPHEADER, array( 'Authorization: token ' . $this->token() ) );
 		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, TRUE );
 
 		$response = curl_exec( $ch );
@@ -189,7 +190,7 @@ class Gitigniter {
 		
 		$ch = curl_init( $this->api_url . $call );
 		
-		curl_setopt( $ch, CURLOPT_HTTPHEADER, array( 'Authorization: token ' . $this->ci->session->userdata( 'gh_token' ) ) );
+		curl_setopt( $ch, CURLOPT_HTTPHEADER, array( 'Authorization: token ' . $this->token() ) );
 		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, TRUE );
 		curl_setopt( $ch, CURLOPT_POST, TRUE );
 		curl_setopt( $ch, CURLOPT_POSTFIELDS, $post_options );
@@ -210,6 +211,22 @@ class Gitigniter {
 		return json_decode( $response ); //This means there was successful access to the API, but the result could be errorneous.
 		
 	}
+
+	public function token()
+	{
+		if ($this->ci->session->userdata( 'gh_token' ))
+		{
+			return $this->ci->session->userdata( 'gh_token');
+		}
+
+		if (! empty($this->gh_token))
+		{
+			return $this->gh_token;
+		}		
+
+		return $this->retrieve_token();
+		
+	}
 	
 	/*********************************************************************************************************************
 	
@@ -217,7 +234,7 @@ class Gitigniter {
 	
 	*********************************************************************************************************************/
 	
-	public function retrieve_token( $user_id ){
+	public function retrieve_token( $user_id = NULL){
 	
 		$token =  $this->ci->gitigniter_model->retrieve_token( $user_id );
 		

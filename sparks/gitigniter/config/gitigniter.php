@@ -47,6 +47,8 @@ $config['gh_token_field'] = 'gh_token';
 //Optional. If you need to create repos for an organization.
 //$config['gh_org'] = ''; 
 
+//Optional. If you want to add the token directly instead of using it via the user_id or session.
+//$config['gh_token'] = '';
 
 /* End of file gitigniter.php */
 /* Location: ./application/config/github.php */
